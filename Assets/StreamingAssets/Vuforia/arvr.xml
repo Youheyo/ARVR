@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="jim-carrey" size="20.000000 15.000000" />
+    <ImageTarget name="baller" size="20.000000 20.000000" />
+    <ImageTarget name="toonbrickwall" size="20.000000 12.811388" />
+    <ImageTarget name="brickwall" size="20.000000 20.000000" />
+    <ImageTarget name="shawsign" size="20.000000 20.500736" />
+    <ImageTarget name="rounded-rocks-texture" size="1.000000 0.750000" />
+    <ImageTarget name="craggy-wall" size="1.000000 0.668945" />
+    <ImageTarget name="dlsu-logo" size="1.000000 1.014955" />
+  </Tracking>
+</QCARConfig>
