@@ -1,5 +1,6 @@
 # ARVR
  ARVR Class activities
+ 
 **REQUIRES THE VUFORIA PACKAGES, CURRENT VUFORIA PACKAGE USES com.ptc.vuforia.engine-10.12.3.tgz**
 
 Each Activity is in their own scene and folder
