@@ -33,14 +33,14 @@ public class ZombieAgentController : MonoBehaviour
 
     public void OnTap(Vector2 touchPos)
     {
-        Debug.Log("Tap Success");
+        //Debug.Log("Tap Success");
         Ray r = Camera.main.ScreenPointToRay(touchPos);
         Debug.DrawRay(r.origin, r.direction * 10f, Color.red, 5.0f);
         RaycastHit hit;
         int layerMask = LayerMask.GetMask("ImageTarget");
         if(Physics.Raycast(r, out hit, 100, layerMask))
         {
-            Debug.Log("Hit " + hit.transform.name);
+            //Debug.Log("Hit " + hit.transform.name);
             Vector3 hitPoint = hit.point;
             MoveAgentsToPosition(hitPoint);
         }
