@@ -11,11 +11,15 @@ public class PlacableFurniture : MonoBehaviour
     void Start()
     {
         this.gameObject.SetActive(false);
+        this.GetComponent<Renderer>().enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isPlaced){
+          this.GetComponent<Renderer>().enabled = true;
+
+        }
     }
 }

@@ -19,7 +19,7 @@ public class PlaceFurnitureScript : MonoBehaviour
             if(SelectedObject != null){
                 PlaceSelectedFurniture();
             }else{
-                //Move the raycasted object
+                //MoveSelectedFurniture();
             }
         }
     }
@@ -28,12 +28,16 @@ public class PlaceFurnitureScript : MonoBehaviour
         Debug.Log($"Attempting to Place {SelectedObject.name}");
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        Debug.DrawRay(r.origin, r.direction * 1000f, Color.red, 5f);
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 1000f, Color.red, 5f);
 
+        //if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, 3)){
         if (Physics.Raycast(r, out RaycastHit hit, Mathf.Infinity)){
+            
             Debug.Log("Hit " + hit.collider.name);
             Vector3 spawnPoint = hit.point;
+           //spawnPoint.y = 0;
             SelectedObject.transform.position = spawnPoint;
+
 
             SelectedObject.TryGetComponent<PlacableFurniture>(out PlacableFurniture placeComponent);
             placeComponent.isPlaced = true;
@@ -46,23 +50,18 @@ public class PlaceFurnitureScript : MonoBehaviour
 
     void MoveSelectedFurniture(){
 
-        Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Debug.DrawRay(r.origin, r.direction * 1000f, Color.red, 5f);
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 1000f, Color.red, 5f);
 
-        Debug.DrawRay(r.origin, r.direction * 1000f, Color.red, 5f);
-
-        if (Physics.Raycast(r, out RaycastHit hit, Mathf.Infinity, 3)){
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, 3)){
 
             if(!hit.collider.GetComponent<PlacableFurniture>().isPlaced) return;
 
             Debug.Log($"Attempting to reposition {SelectedObject.name}");
 
-            Vector3 spawnPoint = hit.point;
-            SelectedObject.transform.position = spawnPoint;
+            SelectedObject = hit.collider.gameObject;
 
-            SelectedObject.TryGetComponent<PlacableFurniture>(out PlacableFurniture placeComponent);
-            placeComponent.isPlaced = true;
-
-            SelectedObject.SetActive(true);
         }
     }
 }
