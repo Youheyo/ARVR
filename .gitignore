@@ -76,4 +76,5 @@ Nuget/*
 omnisharp.json
 Assets/FantasyMonster/*
 Assets/Editor/*
+TestBuild/*
 Packages/com.ptc.vuforia.engine-10.12.3.tgz

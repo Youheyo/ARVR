@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FurniturePlacer.unity
+    guid: 3979fbd66d508654c81829b9af6e584a
   m_configObjects: {}
