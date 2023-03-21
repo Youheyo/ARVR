@@ -10,6 +10,8 @@ public class RigidBodyObjectsHandler : MonoBehaviour
     void Start()
     {
         rbList = FindObjectsOfType<RigidBodyObjectScript>();
+
+        Debug.Log(rbList.Length + " objects found");
     }
 
     public void ActivateRBs(bool activate){
