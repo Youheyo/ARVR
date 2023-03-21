@@ -679,10 +679,18 @@ PrefabInstance:
     - target: {fileID: 93097053441597755, guid: 612c9ff5cd0158a4a992c0f3384b8d1b, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 234970047}
+      objectReference: {fileID: 1037065763}
     - target: {fileID: 1242744726344205760, guid: 612c9ff5cd0158a4a992c0f3384b8d1b, type: 3}
       propertyPath: m_Name
       value: WreckingBallPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851056959627773100, guid: 612c9ff5cd0158a4a992c0f3384b8d1b, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 234970047}
+    - target: {fileID: 4959442421778236705, guid: 612c9ff5cd0158a4a992c0f3384b8d1b, type: 3}
+      propertyPath: m_MaxDistance
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 5550958367847066964, guid: 612c9ff5cd0158a4a992c0f3384b8d1b, type: 3}
       propertyPath: m_ConnectedBody
@@ -737,6 +745,11 @@ PrefabInstance:
 --- !u!1 &1037065762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1242744726344205760, guid: 612c9ff5cd0158a4a992c0f3384b8d1b, type: 3}
+  m_PrefabInstance: {fileID: 1037065761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1037065763 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8332111078714949438, guid: 612c9ff5cd0158a4a992c0f3384b8d1b, type: 3}
   m_PrefabInstance: {fileID: 1037065761}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1307041565
